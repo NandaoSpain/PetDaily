@@ -1,0 +1,114 @@
+form {
+  max-width: 871px;
+  margin: 0 auto;
+  
+
+  > div {
+    display: flex;
+    gap: 32px;
+    margin: 24px 0;
+    justify-content: space-between;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+      color: #FFFFFF;
+      font-size: 24px;
+      font-family: "Inter Tight", sans-serif;
+      font-weight: bold;
+    }
+
+    span {
+      color: #98959D;
+      padding: 10px 0;
+      font-family: "Inter", sans-serif;
+    }
+  }
+
+  input {
+    margin-bottom: 8px;
+    width: 30%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0.5px solid #E6E6E6;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #1E1E1E;
+    color: #98959D;
+  }
+
+  ul  {
+    list-style-type: none;    
+    margin: 0;
+    background-color: #2E2C30;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .hour-period {
+    border: none;
+    border-bottom: 0.5px solid gray; 
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: bold;
+
+    >div {
+      display: flex;
+      align-items: center;
+    }
+  
+    strong {
+      color: #FFFFFF;
+      font-size: 16px;
+      padding: 0 12px;
+      font-family: "Inter Tight", sans-serif;
+    }
+
+    span {
+      color: #98959D;
+      font-family: "Inter Tight", sans-serif;
+    }
+  }
+
+  .card-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    gap: 24px;
+    padding: 32px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #98959D;
+
+    a {
+      color: #b86341;
+      text-decoration: none;
+    }
+
+    >div {
+      display: flex;
+      gap: 24px;
+    }
+
+    .names {
+      display: flex;
+      gap: 8px;
+    }
+
+  .time, .pet-name {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  }
+}

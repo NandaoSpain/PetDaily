@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Daily</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="assets/App Name.png" alt="icone do petshop">
+  </header>
+  <form>
+    <div>
+      <header>
+        <strong>Sua agenda</strong>
+        <span>Aqui você pode ver todos os clientes e serviços agendados para hoje</span>
+      </header>
+      <input type="date" id="date" required>
+    </div>
+    <ul>
+      <!-- Exemplo: Manhã -->
+      <li class="hour-period">
+        <div>
+          <img src="assets/SunMorning.png" alt="">
+          <strong>Manhã</strong>
+        </div>
+        <span>09h-12h</span>
+      </li>
+      <li data-period="morning" value="09:00" class="hour hour-unavailable">
+        <div class="card">
+          <div class="card-line">
+            <div>
+              <div class="time">09:00</div>
+              <div class="names">
+                <div class="pet-name">Thor</div>
+                <div>/</div>
+                <div class="client-name">Fernanda Costa</div>
+              </div>
+            </div>          
+            <div class="service">Vacinação</div>
+            <div class="cancel-button">
+              <a href="#">Remover agendamento</a>
+            </div>
+          </div>
+        </div>        
+      </li>
+      <!-- Exemplo: Tarde -->
+    </ul>
+    <ul> 
+      <li class="hour-period">
+        <div>
+          <img src="assets/SunAfternoon.png" alt="">
+          <strong>Tarde</strong>
+        </div>
+        <span>13h-18h</span>
+      </li>
+      <li data-period="morning" value="09:00" class="hour hour-unavailable">
+        <div class="card">
+          <div class="card-line">
+            <div>
+              <div class="time">09:00</div>
+              <div class="names">
+                <div class="pet-name">Thor</div>
+                <div>/</div>
+                <div class="client-name">Fernanda Costa</div>
+              </div>
+            </div>          
+            <div class="service">Vacinação</div>
+            <div class="cancel-button">
+              <a href="#">Remover agendamento</a>
+            </div>
+          </div>
+        </div>        
+      </li>
+      <li data-period="morning" value="09:00" class="hour hour-unavailable">
+        <div class="card">
+          <div class="card-line">
+            <div>
+              <div class="time">09:00</div>
+              <div class="names">
+                <div class="pet-name">Thor</div>
+                <div>/</div>
+                <div class="client-name">Fernanda Costa</div>
+              </div>
+            </div>          
+            <div class="service">Vacinação</div>
+            <div class="cancel-button">
+              <a href="#">Remover agendamento</a>
+            </div>
+          </div>
+        </div>        
+      </li>
+      <!-- Exemplo: Noite -->
+    </ul>
+    <ul>      
+      <li class="hour-period">
+        <div>
+          <img src="assets/Moon.png" alt="">
+          <strong>Noite</strong>
+        </div>
+        <span>19h-21h</span>
+      </li>
+      <li data-period="morning" value="09:00" class="hour hour-unavailable">
+        <div class="card">
+          <div class="card-line">
+            <div>
+              <div class="time">09:00</div>
+              <div class="names">
+                <div class="pet-name">Thor</div>
+                <div>/</div>
+                <div class="client-name">Fernanda Costa</div>
+              </div>
+            </div>          
+            <div class="service">Vacinação</div>
+            <div class="cancel-button">
+              <a href="#">Remover agendamento</a>
+            </div>
+          </div>
+        </div>        
+      </li>
+    </ul>
+  </form>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
