@@ -1,7 +1,8 @@
 form {
   max-width: 871px;
   margin: 0 auto;
-  
+  display: flex;
+  flex-direction: column;
 
   > div {
     display: flex;
@@ -52,7 +53,7 @@ form {
 
   .hour-period {
     border: none;
-    border-bottom: 0.5px solid gray; 
+    border-bottom: 0.5px solid rgba(238, 238, 241, 0.096); 
     width: 100%;
     padding: 12px;
     display: flex;
@@ -80,16 +81,23 @@ form {
   }
 
   .card-line {
+    width: 95%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     color: #fff;
     gap: 24px;
-    padding: 32px;
+    padding: 24px 32px;
     font-family: "Inter", sans-serif;
     font-size: 12px;
     color: #98959D;
+    border-top: 0.5px solid rgba(238, 238, 241, 0.096);
+
+  
+
+    
 
     a {
       color: #b86341;
@@ -111,4 +119,18 @@ form {
     font-weight: bold;
   }
   }
+}
+button {
+  height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #9282FA;
+  color: #050505;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
 }
