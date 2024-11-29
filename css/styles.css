@@ -1,35 +1,50 @@
-form {
+.inform {
   max-width: 871px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 
-  > div {
+  #openModalBtn {
+    height: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #9282FA;
+    color: #050505;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+  }
+
+  > .header {
     display: flex;
     gap: 32px;
     margin: 24px 0;
     justify-content: space-between;
   }
 
-  header {
+  .title {
     display: flex;
     flex-direction: column;
 
-    strong {
+    > strong {
       color: #FFFFFF;
       font-size: 24px;
       font-family: "Inter Tight", sans-serif;
       font-weight: bold;
     }
 
-    span {
+    > span {
       color: #98959D;
       padding: 10px 0;
       font-family: "Inter", sans-serif;
     }
   }
 
-  input {
+   #date {
     margin-bottom: 8px;
     width: 30%;
     height: 60px;
@@ -62,7 +77,7 @@ form {
     font-family: "Inter Tight", sans-serif;
     font-weight: bold;
 
-    >div {
+    div {
       display: flex;
       align-items: center;
     }
@@ -95,22 +110,21 @@ form {
     color: #98959D;
     border-top: 0.5px solid rgba(238, 238, 241, 0.096);
 
-  
-
-    
 
     a {
       color: #b86341;
       text-decoration: none;
     }
 
-    >div {
+    .card-line-info {
       display: flex;
+      flex-direction: row;
       gap: 24px;
     }
 
     .names {
       display: flex;
+      flex-direction: row;
       gap: 8px;
     }
 
@@ -120,17 +134,76 @@ form {
   }
   }
 }
-button {
-  height: 60px;
-  padding: 10px;
+
+
+/* Estilo geral do modal */
+.modal {
+  display: none; /* Esconde o modal por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #23242C;
   border-radius: 8px;
-  border: none;
-  box-sizing: border-box;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-  background-color: #9282FA;
-  color: #050505;
-  cursor: pointer;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh; /* Limita altura */
+  overflow-y: auto; /* Habilita rolagem se necessário */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  
+  color: #FFFFFF;
   font-family: "Inter", sans-serif;
+
+  h2 {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-family: "Inter", sans-serif;
+  }
+
+  p {
+    font-size: 12px;
+    color: #7e7e7e;
+  }
+
+  label {
+    font-size: 12px;
+    color: #FFF;
+  }
+
+  input placeholder {
+    color: #98959D;
+    font-size: 14px;
+  }
+}
+
+/* Botão de fechar */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #000;
+}
+
+form div{
+  display: flex;
+  flex-direction: column; 
+  
 }

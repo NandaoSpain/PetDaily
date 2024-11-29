@@ -15,114 +15,116 @@
   <header>
     <img src="assets/App Name.png" alt="Ícone do petshop">
   </header>
-  <form>
-    <div>
-      <header>
-        <strong>Sua agenda</strong>
-        <span>Aqui você pode ver todos os clientes e serviços agendados para hoje</span>
-      </header>
-      <input type="date" id="date" required>
-    </div>
-    <ul>
-      <!-- Exemplo: Manhã -->
-      <li class="hour-period">
-        <div>
-          <img src="assets/SunMorning.png" alt="Ícone de manhã">
-          <strong>Manhã</strong>
-        </div>
-        <span>09h-12h</span>
-      </li>
-      <li data-period="morning" value="09:00" class="hour hour-unavailable">
-        <div class="card">
-          <div class="card-line">
-            <div>
-              <div class="time">09:00</div>
-              <div class="names">
-                <div class="pet-name">Thor</div>
-                <div>/</div>
-                <div class="client-name">Fernanda Costa</div>
+  
+    <form class="inform">
+      <div class="header">
+        <header class="title">
+          <strong>Sua agenda</strong>
+          <span>Aqui você pode ver todos os clientes e serviços agendados para hoje</span>
+        </header>
+        <input type="date" id="date" required>
+      </div>
+      <ul>
+        <!-- Exemplo: Manhã -->
+        <li class="hour-period">
+          <div>
+            <img src="assets/SunMorning.png" alt="Ícone de manhã">
+            <strong>Manhã</strong>
+          </div>
+          <span>09h-12h</span>
+        </li>
+        <li data-period="morning" value="09:00" class="hour hour-unavailable">
+          <div class="card">
+            <div class="card-line">
+              <div class="card-line-info">
+                <div class="time">09:00</div>
+                <div class="names">
+                  <div class="pet-name">Thor</div>
+                  <div>/</div>
+                  <div class="client-name">Fernanda Costa</div>
+                </div>
+              </div>
+              <div class="service">Vacinação</div>
+              <div class="cancel-button">
+                <a href="#">Remover agendamento</a>
               </div>
             </div>
-            <div class="service">Vacinação</div>
-            <div class="cancel-button">
-              <a href="#">Remover agendamento</a>
-            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-    <ul>
-      <!-- Exemplo: Tarde -->
-      <li class="hour-period">
-        <div>
-          <img src="assets/SunAfternoon.png" alt="Ícone da tarde">
-          <strong>Tarde</strong>
-        </div>
-        <span>13h-18h</span>
-      </li>
-      <li data-period="afternoon" value="13:00" class="hour hour-unavailable">
-        <div class="card">
-          <div class="card-line">
-            <div>
-              <div class="time">13:00</div>
-              <div class="names">
-                <div class="pet-name">Thor</div>
-                <div>/</div>
-                <div class="client-name">Fernanda Costa</div>
+        </li>
+      </ul>
+      <ul>
+        <!-- Exemplo: Tarde -->
+        <li class="hour-period">
+          <div>
+            <img src="assets/SunAfternoon.png" alt="Ícone da tarde">
+            <strong>Tarde</strong>
+          </div>
+          <span>13h-18h</span>
+        </li>
+        <li data-period="afternoon" value="13:00" class="hour hour-unavailable">
+          <div class="card">
+            <div class="card-line">
+              <div>
+                <div class="time">13:00</div>
+                <div class="names">
+                  <div class="pet-name">Thor</div>
+                  <div>/</div>
+                  <div class="client-name">Fernanda Costa</div>
+                </div>
+              </div>
+              <div class="service">Vacinação</div>
+              <div class="cancel-button">
+                <a href="#">Remover agendamento</a>
               </div>
             </div>
-            <div class="service">Vacinação</div>
-            <div class="cancel-button">
-              <a href="#">Remover agendamento</a>
-            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-    <ul>
-      <!-- Exemplo: Noite -->
-      <li class="hour-period">
-        <div>
-          <img src="assets/Moon.png" alt="Ícone da noite">
-          <strong>Noite</strong>
-        </div>
-        <span>19h-21h</span>
-      </li>
-      <li data-period="night" value="19:00" class="hour hour-unavailable">
-        <div class="card">
-          <div class="card-line">
-            <div>
-              <div class="time">19:00</div>
-              <div class="names">
-                <div class="pet-name">Thor</div>
-                <div>/</div>
-                <div class="client-name">Fernanda Costa</div>
+        </li>
+      </ul>
+      <ul>
+        <!-- Exemplo: Noite -->
+        <li class="hour-period">
+          <div>
+            <img src="assets/Moon.png" alt="Ícone da noite">
+            <strong>Noite</strong>
+          </div>
+          <span>19h-21h</span>
+        </li>
+        <li data-period="night" value="19:00" class="hour hour-unavailable">
+          <div class="card">
+            <div class="card-line">
+              <div>
+                <div class="time">19:00</div>
+                <div class="names">
+                  <div class="pet-name">Thor</div>
+                  <div>/</div>
+                  <div class="client-name">Fernanda Costa</div>
+                </div>
+              </div>
+              <div class="service">Vacinação</div>
+              <div class="cancel-button">
+                <a href="#">Remover agendamento</a>
               </div>
             </div>
-            <div class="service">Vacinação</div>
-            <div class="cancel-button">
-              <a href="#">Remover agendamento</a>
-            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-    <button data-micromodal-trigger="modal-1" id="modal-button">NOVO AGENDAMENTO</button>
-  </form>
+        </li>
+      </ul>
+      <button id="openModalBtn">NOVO AGENDAMENTO</button>
+    </form>
+  
 
   <!-- Modal -->
-  <div id="modal-1" aria-hidden="true">
-    <div tabindex="-1" role="dialog" aria-modal="true">
+  <div id="modal" class="modal">
+    <div class="modal-content">
       <header>
-        <h2 id="modal-1-title">Agende um atendimento</h2>
+        <h2 id="modal-title">Agende um atendimento</h2>
         <p>Preencha os dados do cliente para realizar o agendamento</p>
-        <button aria-label="Close modal" data-micromodal-close>&times;</button>
+        <span id="closeModalBtn" class="close">&times;</span>
       </header>
       <main>
         <form id="new-appointment-form">
           <div>
             <label for="client-name">Nome do tutor:</label>
-            <input type="text" id="client-name" name="client-name" required>
+            <input type="text" id="client-name" name="client-name" required placeholder="Helena Souza">
           </div>
           <div>
             <label for="pet-name">Nome do pet:</label>
