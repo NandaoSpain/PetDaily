@@ -1,28 +1,37 @@
 // Selecionar elementos do DOM
+
+/*
 const modal = document.getElementById('modal-1');
-const openModalButton = document.querySelector('.modal-button');
+const openModalButton = document.getElementsById('modal-button');
 const closeModalButtons = document.querySelectorAll('[data-micromodal-close]');
 const appointmentForm = document.getElementById('new-appointment-form');
 const appointmentList = document.querySelector('ul'); // A lista principal de horários
 
+modal.querySelector('div').addEventListener('click', (event) => {
+  event.stopPropagation();
+});
+
 // Função para abrir o modal
 function openModal() {
+  MicroModal.show('modal-1')
   modal.style.display = 'block'; // Mostra o modal
   modal.setAttribute('aria-hidden', 'false');
 }
 
 // Função para fechar o modal
 function closeModal() {
+  console.log('close modal');
   modal.style.display = 'none'; // Esconde o modal
-  modal.setAttribute('aria-hidden', 'true');
+  modal.setAttribute('aria-hidden', 'false');
 }
 
 // Evento para abrir o modal
-openModalButton.addEventListener('click', openModal);
+openModalButton.addEventListener('click', openModal())
 
 // Evento para fechar o modal (aplicado a todos os botões que fecham o modal)
 closeModalButtons.forEach((button) => {
   button.addEventListener('click', closeModal);
+  console.log('button');
 });
 
 // Adicionar evento de clique fora do modal para fechar
@@ -84,3 +93,4 @@ appointmentList.addEventListener('click', (event) => {
     appointment.remove(); // Remove o agendamento
   }
 });
+/*
