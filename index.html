@@ -27,7 +27,7 @@
       <ul>
         <!-- Exemplo: Manhã -->
         <li class="hour-period">
-          <div>
+          <div class="morning period">
             <img src="assets/SunMorning.png" alt="Ícone de manhã">
             <strong>Manhã</strong>
           </div>
@@ -64,7 +64,7 @@
         <li data-period="afternoon" value="13:00" class="hour hour-unavailable">
           <div class="card">
             <div class="card-line">
-              <div>
+              <div class="card-line-info">
                 <div class="time">13:00</div>
                 <div class="names">
                   <div class="pet-name">Thor</div>
@@ -92,7 +92,7 @@
         <li data-period="night" value="19:00" class="hour hour-unavailable">
           <div class="card">
             <div class="card-line">
-              <div>
+              <div class="card-line-info">
                 <div class="time">19:00</div>
                 <div class="names">
                   <div class="pet-name">Thor</div>
@@ -124,26 +124,38 @@
         <form id="new-appointment-form">
           <div>
             <label for="client-name">Nome do tutor:</label>
-            <input type="text" id="client-name" name="client-name" required placeholder="Helena Souza">
+            <div class="placeholder">
+              <img src="assets/User.png" alt="">
+              <input type="text" id="client-name" name="client-name" required placeholder="Helena Souza">
+            </div>
           </div>
           <div>
             <label for="pet-name">Nome do pet:</label>
-            <input type="text" id="pet-name" name="pet-name" required>
+            <div class="placeholder">
+              <img src="assets/Pet.png" alt="">
+              <input type="text" id="pet-name" name="pet-name" required placeholder="Cheddar">
+            </div>
           </div>
           <div>
             <label for="phone">Telefone:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <div class="placeholder">
+              <img src="assets/Phone.png" alt="">
+              <input type="tel" id="phone" name="phone" required placeholder="(00) 0 0000-0000">
+            </div>
           </div>
-          <div>
+          <div class="description">
             <label for="service">Descrição do serviço:</label>
-            <select id="service" name="service" required>
-              <option value="">Selecione um serviço</option>
-              <option value="Consulta">Consulta</option>
-              <option value="Vacinação">Vacinação</option>
-              <option value="Veterinário">Veterinário</option>
-              <option value="Banho e Tosa">Banho e Tosa</option>
-              <option value="Outro">Outro</option>
-            </select>
+            <input type="text" name="service" id="service" placeholder="Banho e tosa">
+          </div>
+          <div class="date-hour">
+            <div>
+              <label for="date-time">Data:</label>
+              <input type="date" id="date-time" name="date-time" required>
+            </div>
+            <div>
+              <label for="time-date">Hora:</label>
+              <input type="time" id="time-date" name="time-date" required>
+            </div>
           </div>
           <div>
             <button type="submit">Agendar</button>

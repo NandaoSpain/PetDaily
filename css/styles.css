@@ -30,18 +30,19 @@
     display: flex;
     flex-direction: column;
 
-    > strong {
-      color: #FFFFFF;
-      font-size: 24px;
-      font-family: "Inter Tight", sans-serif;
-      font-weight: bold;
-    }
+    
 
     > span {
       color: #98959D;
       padding: 10px 0;
       font-family: "Inter", sans-serif;
     }
+  }
+  .morning-period {
+    color: #FFF;
+    font-size: 24px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: bold;
   }
 
    #date {
@@ -110,16 +111,16 @@
     color: #98959D;
     border-top: 0.5px solid rgba(238, 238, 241, 0.096);
 
+    
+  .card-line-info {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
 
     a {
       color: #b86341;
       text-decoration: none;
-    }
-
-    .card-line-info {
-      display: flex;
-      flex-direction: row;
-      gap: 24px;
     }
 
     .names {
@@ -131,6 +132,7 @@
   .time, .pet-name {
     color: #FFFFFF;
     font-weight: bold;
+
   }
   }
 }
@@ -154,7 +156,7 @@
   background-color: #23242C;
   border-radius: 8px;
   width: 90%;
-  max-width: 500px;
+  max-width: 400px;
   max-height: 90vh; /* Limita altura */
   overflow-y: auto; /* Habilita rolagem se necessário */
   padding: 24px;
@@ -174,16 +176,36 @@
   p {
     font-size: 12px;
     color: #7e7e7e;
+    margin-bottom: 20px;
   }
 
   label {
     font-size: 12px;
     color: #FFF;
+    padding: 8px 0;
+  }
+
+  input {
+    background-color: #23242C;
+    width: 100%;
+    padding: 10px;
+    border: 0.5px solid rgba(116, 116, 116, 0.116);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #98959D;
+  }
+
+  .input:focus-within {
+    border: 1px solid #812eb8;
   }
 
   input placeholder {
     color: #98959D;
     font-size: 14px;
+    font-family: "Inter", sans-serif;
+  }
+  #client-name, #pet-name, #phone{
+    padding: 10px 32px;
   }
 }
 
@@ -207,3 +229,47 @@ form div{
   flex-direction: column; 
   
 }
+
+.placeholder {
+  display: flex;
+  flex-direction: row; 
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+    position: absolute;
+  }
+    
+}
+
+.date-hour {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  
+}
+
+#date-time, #time-date {
+  padding: 10px 10px 10px 30px;
+  width: 167px;
+  background-color: #23242C;
+  border: 0.5px solid rgba(116, 116, 116, 0.116);
+
+  color: #98959D;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  }
+
+input[type="date"]::placeholder {
+    color: #530b0b;
+    font-style: italic;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    color: #751010;
+    font-style: italic;
+}
+
