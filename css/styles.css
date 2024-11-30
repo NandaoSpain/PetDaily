@@ -17,6 +17,10 @@
     cursor: pointer;
     font-family: "Inter", sans-serif;
     font-weight: bold;
+
+    &:hover {
+      background-color: #9282fa7c;
+    }
   }
 
   > .header {
@@ -249,6 +253,10 @@ form div{
   gap: 16px;
   margin-bottom: 20px;
 
+  i {
+    position: absolute;
+    margin: 10px;    
+  }
   
 }
 
@@ -263,13 +271,45 @@ form div{
   font-family: "Inter", sans-serif;
   }
 
-input[type="date"]::placeholder {
-    color: #530b0b;
-    font-style: italic;
+  input[type="date"]::placeholder, input[type="time"] {
+    border: none;
+    background-color: transparent;
+    color: #98959D;
+    font-size: 144px;
+    font-family: "Inter", sans-serif;
+  }
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 16px;
+  
+  button {
+    background-color: #b86341;
+    color: #FFF;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+    
+    transition: border-color 0.3s ease;
+    background-color: #9282FA;
+    color: #050505;
+    font-weight: bold;
+    
+    &:hover {
+      background-color: #9282fa7c;
+    }
+  }
 }
 
-input[type="date"]::-webkit-input-placeholder {
-    color: #751010;
-    font-style: italic;
-}
+
 

@@ -118,7 +118,7 @@
       <header>
         <h2 id="modal-title">Agende um atendimento</h2>
         <p>Preencha os dados do cliente para realizar o agendamento</p>
-        <span id="closeModalBtn" class="close">&times;</span>
+        <span id="closeModalSpan" class="close">&times;</span>
       </header>
       <main>
         <form id="new-appointment-form">
@@ -150,16 +150,22 @@
           <div class="date-hour">
             <div>
               <label for="date-time">Data:</label>
-              <input type="date" id="date-time" name="date-time" required>
+              <div>
+                <i><img src="assets/Calendar.png" alt=""></i>
+                <input type="date" id="date-time" name="date-time" required>
+              </div>
             </div>
             <div>
               <label for="time-date">Hora:</label>
-              <input type="time" id="time-date" name="time-date" required>
+              <div>
+                <i><img src="assets/Clock.png" alt=""></i>
+                <input type="time" id="time-date" name="time-date" required>
+              </div>
             </div>
           </div>
-          <div>
+          <div class="modalButtons">
             <button type="submit">Agendar</button>
-            <button type="button" data-micromodal-close>Cancelar</button>
+            <button type="button" id="closeModalBtn">Cancelar</button>
           </div>
         </form>
       </main>
