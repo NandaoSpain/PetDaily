@@ -56,14 +56,10 @@
 
    .dateInput {
     width: 30%;
-    height: 3rem;
     margin-top: 10px;
     border: 1px solid #3e3c41;
     padding: 0.87rem 0.75rem;
     border-radius: 0.5rem;
-
-    display: flex;
-    margin-bottom: 1.5rem;
   }
 
   .dateInput i {
@@ -223,6 +219,11 @@
     border: 1px solid #812eb8;
   }
 
+  .placeholder i {
+    margin-right: -2.2rem;
+    position: relative;
+  }
+
   input placeholder {
     color: #98959D;
     font-size: 14px;
@@ -267,7 +268,7 @@ form div{
     width: 20px;
     height: 20px;
     margin: 8px;
-    position: absolute;
+    
   }
     
 }
@@ -275,12 +276,25 @@ form div{
 .date-hour {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 24px;
   margin-bottom: 20px;
 
+  label {
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 16px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
   i {
-    position: absolute;
-    margin: 10px;    
+    margin-bottom: -35px;
+    margin-left: 10px;    
+    position: relative;
   }
   
 }
@@ -295,15 +309,11 @@ form div{
   font-size: 14px;
   font-family: "Inter", sans-serif;
   }
-/*
-  input[type="date"]::placeholder, input[type="time"] {
-    border: none;
-    background-color: transparent;
-    color: #98959D;
-    font-size: 144px;
-    font-family: "Inter", sans-serif;
+
+  input:focus-within {
+    border: 1px solid #812eb8;
   }
-*/
+
 .modalButtons {
   display: flex;
   justify-content: flex-end;
