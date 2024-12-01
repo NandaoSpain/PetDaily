@@ -1,6 +1,11 @@
 {
+  "type": "module",
+  "scripts": {
+    "server": "json-server --watch server.json --port 3335"
+  },
   "dependencies": {
-    "dayjs": "^1.11.13",
+    "dayjs": "^1.11.10",
+    "json-server": "^1.0.0-beta.3",
     "micromodal": "^0.4.10"
   }
 }
