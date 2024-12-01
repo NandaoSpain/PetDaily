@@ -1,5 +1,11 @@
+"use strict"
+
 import "./submit.js"
 import "../libs/dayjs.js"
+
+import "../css/global.css"
+import "../css/styles.css"
+
 // Seleciona os elementos necessários
 const openModalBtn = document.getElementById('openModalBtn')
 const closeModalBtn = document.getElementById('closeModalBtn')
