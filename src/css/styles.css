@@ -54,18 +54,33 @@
     font-weight: bold;
   }
 
-   #date {
-    margin-bottom: 8px;
+   .dateInput {
     width: 30%;
-    height: 60px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 0.5px solid #E6E6E6;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-    background-color: #1E1E1E;
-    color: #98959D;
+    height: 3rem;
+    margin-top: 10px;
+    border: 1px solid #3e3c41;
+    padding: 0.87rem 0.75rem;
+    border-radius: 0.5rem;
+
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+
+  .dateInput i {
+    margin-right: 0.5rem;
+  }
+  
+  .dateInput input {
+    flex: 1;
+  
+    font-family: "Catamaran", sans-serif;
+  
+    font-size: 1rem;
+    color: #b2afb6;
+    background-color: transparent;
+  
+    outline: none;
+    border: none;
   }
 
   ul  {
@@ -239,6 +254,11 @@ form div{
   
 }
 
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("../assets/arrow-down.svg") no-repeat;
+}
+
 .placeholder {
   display: flex;
   flex-direction: row; 
@@ -275,7 +295,7 @@ form div{
   font-size: 14px;
   font-family: "Inter", sans-serif;
   }
-
+/*
   input[type="date"]::placeholder, input[type="time"] {
     border: none;
     background-color: transparent;
@@ -283,7 +303,7 @@ form div{
     font-size: 144px;
     font-family: "Inter", sans-serif;
   }
-
+*/
 .modalButtons {
   display: flex;
   justify-content: flex-end;

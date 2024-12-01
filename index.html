@@ -15,13 +15,16 @@
     <img src="./src/assets/App Name.png" alt="Ícone do petshop">
   </header>
   
-    <form class="inform">
+    <main class="inform">
       <div class="header">
         <header class="title">
           <strong>Sua agenda</strong>
           <span>Aqui você pode ver todos os clientes e serviços agendados para hoje</span>
         </header>
-        <input type="date" id="date" required>
+        <div class="dateInput">
+          <i><img src="src/assets/Calendar.svg" alt=""></i>
+          <input type="date" id="date" name="date" required>
+        </div>
       </div>
       <ul>
         <!-- Exemplo: Manhã -->
@@ -108,7 +111,7 @@
         </li>
       </ul>
       <button id="openModalBtn">NOVO AGENDAMENTO</button>
-    </form>
+    </main>
   
 
   <!-- Modal -->
@@ -183,6 +186,6 @@
     </div>
   </div>
 
-  <script type="module" src="main.js"></script>
+  <script type="module" src="./src/utils/main.js"></script>
 </body>
 </html>
