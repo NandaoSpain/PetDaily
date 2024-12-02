@@ -15,5 +15,21 @@ export function hoursLoad({ date }) {
     hour,
     isAvailable:!isHourPast,
   }
- })
+})
+// Cria um select com os horários de atendimento disponíveis, já preenchendo com a hora atual.
+const select = document.querySelector("select")
+opening.forEach(({ hour, isAvailable}) =>  {  
+  const option = document.createElement("option")
+  if (isAvailable) {
+    option.selected = true
+    option.style.color = "#B7D4FF"
+  } else {
+    option.disabled = true 
+    option.style.color = "#D4A5A5"
+    option.style.cursor = "not-allowed"
+  }
+  option.textContent = hour
+  option.value = hour
+  select.append(option)
+})
 }
