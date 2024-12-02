@@ -224,6 +224,7 @@
     position: relative;
   }
 
+
   input placeholder {
     color: #98959D;
     font-size: 14px;
@@ -270,7 +271,6 @@ form div{
     margin: 8px;
     
   }
-    
 }
 
 .date-hour {
@@ -283,19 +283,8 @@ form div{
     font-size: 12px;
     font-family: "Inter", sans-serif;
     padding-bottom: 16px;
-  }
+  } 
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-  i {
-    margin-bottom: -35px;
-    margin-left: 10px;    
-    position: relative;
-  }
   
 }
 
@@ -304,10 +293,11 @@ form div{
   width: 167px;
   background-color: #23242C;
   border: 0.5px solid rgba(116, 116, 116, 0.116);
-
+  border-radius: 8px;
   color: #98959D;
   font-size: 14px;
   font-family: "Inter", sans-serif;
+  padding: 10px;
   }
 
   input:focus-within {

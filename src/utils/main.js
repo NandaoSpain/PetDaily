@@ -1,8 +1,12 @@
 "use strict"
-
-import "./submit.js"
+// Configuração do dayjs
 import "../libs/dayjs.js"
 
+// Imports JS
+import "./submit.js"
+import "../modules/dom-load.js"
+
+// Imports CSS
 import "../css/global.css"
 import "../css/styles.css"
 
