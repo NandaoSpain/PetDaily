@@ -45,11 +45,11 @@ opening.forEach(({ hour, isAvailable}) =>  {
 
 function hourHeaderAdd(title) {
   const select = document.querySelector("select")
-
   const header = document.createElement("option")
   header.textContent = title
   header.disabled = true
   header.style.backgroundColor = "#1E1E1E"
   header.style.cursor = "not-allowed"
+  header.style.color = "#FFF"
   select.append(header)
 }
