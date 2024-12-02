@@ -16,8 +16,8 @@ export function hoursLoad({ date }) {
     isAvailable:!isHourPast,
   }
 })
-// Cria um select com os horários de atendimento disponíveis, já preenchendo com a hora atual.
 const select = document.querySelector("select")
+// Cria um select com os horários de atendimento disponíveis, já preenchendo com a hora atual.
 opening.forEach(({ hour, isAvailable}) =>  {  
   const option = document.createElement("option")
   if (isAvailable) {
@@ -30,6 +30,26 @@ opening.forEach(({ hour, isAvailable}) =>  {
   }
   option.textContent = hour
   option.value = hour
+  
+  if(hour === "06:00"){
+    hourHeaderAdd("Manhã")
+  } else if (hour === "13:00") {
+    hourHeaderAdd("Tarde")
+  } else if (hour === "18:00") {
+    hourHeaderAdd("Noite")
+  }
+  
   select.append(option)
 })
+}
+
+function hourHeaderAdd(title) {
+  const select = document.querySelector("select")
+
+  const header = document.createElement("option")
+  header.textContent = title
+  header.disabled = true
+  header.style.backgroundColor = "#1E1E1E"
+  header.style.cursor = "not-allowed"
+  select.append(header)
 }
