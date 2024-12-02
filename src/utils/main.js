@@ -3,7 +3,7 @@
 import "../libs/dayjs.js"
 
 // Imports JS
-import "./submit.js"
+import "../modules/form/submit.js"
 import "../modules/dom-load.js"
 
 // Imports CSS
