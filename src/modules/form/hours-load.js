@@ -21,12 +21,14 @@ export function hoursLoad({ date }) {
     isAvailable: !isHourPast 
   }
 })
+//Verifica se a data do input é no futuro
 const isFuture = date < inputDate.value
 
 const select = document.querySelector("select")
 // Cria um select com os horários de atendimento disponíveis, já preenchendo com a hora atual.
 opening.forEach(({ hour, isAvailable}) =>  {  
   const option = document.createElement("option")
+  // Se a data atual é no futuro todos os horarios recebem isAvailable
   if (isFuture) isAvailable = true
   if (isAvailable) {
     option.selected = true
