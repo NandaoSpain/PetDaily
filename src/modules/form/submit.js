@@ -46,7 +46,7 @@ form.onsubmit = (e) => {
     const when = dayjs(date).add(hour, "hour")
     // gera um ID
     const id = new Date().getTime()
-
+    // fazer um modal com o código de abaixo
     //alert(`Serviço agendado para ${when.format('DD/MM/YYYY HH:mm')} com o nome do cliente ${name}, pet ${pet}, telefone ${phone}, descrição ${description}`)
   } catch (error) {
     console.log(error)

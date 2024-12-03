@@ -5,6 +5,7 @@ import "../libs/dayjs.js"
 // Imports JS
 import "../modules/form/submit.js"
 import "../modules/dom-load.js"
+import "../modules/form/date-change.js"
 
 // Imports CSS
 import "../css/global.css"
