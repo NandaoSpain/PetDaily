@@ -16,11 +16,22 @@ const openModalBtn = document.getElementById('openModalBtn')
 const closeModalBtn = document.getElementById('closeModalBtn')
 const closeModalSpan = document.getElementById('closeModalSpan')
 const modal = document.getElementById('modal')
+const successModal = document.getElementById('successModal')
+const modalSuccessParagraph = document.getElementById('modal-success-paragraph')
 
 // Abre o modal
 openModalBtn.addEventListener('click', () => {
     modal.style.display = 'flex' // Exibe o modal como flexbox
 })
+
+export function successfullyModal ({ pet, when}) {    
+    successModal.style.display = 'flex' // Exibe o modal de sucesso
+    modalSuccessParagraph.innerHTML = `Agendado com sucesso, esperamos <strong>${pet}</strong> para o dia <strong>${when.format('DD/MM/YYYY HH:mm')}</strong>` // Atualiza o título do modal de sucesso
+    setTimeout(() => {
+        successModal.style.display = 'none' // Esconde o modal de sucesso
+        modal.style.display = 'none' // Esconde o modal
+    }, 4000) // Mostra o modal de sucesso por 3 segundos    
+}
 
 // Fecha o modal ao clicar no botão de fechar
 closeModalBtn.addEventListener('click', () => {

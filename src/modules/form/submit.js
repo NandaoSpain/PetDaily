@@ -53,7 +53,7 @@ form.onsubmit = async (e) => {
     await scheduleNew({
       id,
       when,
-      data: {
+      data:{
         name,
         date,
         pet,
@@ -63,6 +63,6 @@ form.onsubmit = async (e) => {
       }
     })
   } catch (error) {
-    console.log(error)
+    console.log(`Esse erro${error}`)
   }
 }

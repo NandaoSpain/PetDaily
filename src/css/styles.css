@@ -159,7 +159,7 @@
 
 
 /* Estilo geral do modal */
-.modal {
+.modal, .successModal {
   display: none; /* Esconde o modal por padrão */
   position: fixed;
   top: 0;
@@ -169,6 +169,34 @@
   background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
   justify-content: center;
   align-items: center;
+}
+
+.modal-success-content {
+  background-color: #1f212e;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh; /* Limita altura */
+  overflow-y: auto; /* Habilita rolagem se necessário */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+
+  h2 {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-family: "Inter", sans-serif;
+  }
+
+  p {
+    font-size: 12px;
+    color: #7e7e7e;
+    margin-bottom: 20px;
+  }
 }
 
 /* Conteúdo do modal */
