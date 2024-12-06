@@ -1,10 +1,4 @@
+
 {
-  "schedules": [{
-    "name": "",
-    "date": "",
-    "time": "",
-    "pet": "",
-    "phone": "",
-    "description": ""
-  }]
+  "schedules": []
 }

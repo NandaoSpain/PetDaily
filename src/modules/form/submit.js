@@ -1,4 +1,6 @@
 import dayjs from "dayjs"
+import { scheduleNew } from "../../services/schedule-new"
+
 const form = document.querySelector('form')
 const selectedDate = document.getElementById('date-time')
 const showDate = document.getElementById('date')
@@ -18,7 +20,7 @@ showDate.value = inputToday
 // Define a data minima como sendo o dia atual
 selectedDate.min = inputToday
 
-form.onsubmit = (e) => {
+form.onsubmit = async (e) => {
   e.preventDefault() 
   
   try {
@@ -48,6 +50,18 @@ form.onsubmit = (e) => {
     const id = new Date().getTime()
     // fazer um modal com o código de abaixo
     //alert(`Serviço agendado para ${when.format('DD/MM/YYYY HH:mm')} com o nome do cliente ${name}, pet ${pet}, telefone ${phone}, descrição ${description}`)
+    await scheduleNew({
+      id,
+      when,
+      data: {
+        name,
+        date,
+        pet,
+        phone,
+        description,
+        time
+      }
+    })
   } catch (error) {
     console.log(error)
   }
