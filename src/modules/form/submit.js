@@ -34,14 +34,7 @@ form.onsubmit = async (e) => {
     if(!time) {
     return alert('Selecione uma hora.')
     }
-    const data = {
-      name,
-      date,
-      pet,
-      phone,
-      description,
-      time
-    }
+  
     // recupera somente a hora
     const [hour] = time.split(':')
     // insere a hora na data
@@ -63,6 +56,6 @@ form.onsubmit = async (e) => {
       }
     })
   } catch (error) {
-    console.log(`Esse erro${error}`)
+    
   }
 }
