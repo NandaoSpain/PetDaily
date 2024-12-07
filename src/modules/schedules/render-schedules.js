@@ -16,9 +16,13 @@ export function renderSchedules({ dailySchedules }) {
     periodAfternoon.innerHTML = ""
     periodNight.innerHTML = ""
 
+    const sortedSchedules = dailySchedules.sort((a, b) => {
+      return dayjs(a.when).unix() - dayjs(b.when).unix() // Ordena pelo horário
+    })
+
     // Renderiza na tela os agendamentos por período
-    dailySchedules.forEach((schedule) => {
-      const { data, when } = schedule // Desestruturação para acessar dados do agendamento
+    sortedSchedules.forEach((schedule) => {
+      const { data, when, id } = schedule // Desestruturação para acessar dados do agendamento
       const { name, pet, description } = data
       const hour = dayjs(when).format("HH:mm")
 
@@ -36,9 +40,9 @@ export function renderSchedules({ dailySchedules }) {
             <div class="client-name">${name}</div>
           </div>
         </div>
-        <div class="service">${description}</div>
-        <div class="cancel-button">
-          <a href="#">Remover agendamento</a>
+        <div class="service" >${description}</div>
+        <div>
+          <a class="remove-button" data-id="${id}" href="#">Remover agendamento</a>
         </div>
       `
       
@@ -53,6 +57,9 @@ export function renderSchedules({ dailySchedules }) {
       } else {
         periodNight.appendChild(item) // Noite
       }
+
+      
+
     })
   } catch (error) {
     console.error("Erro ao renderizar agendamentos:", error.message)

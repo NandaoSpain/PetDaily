@@ -38,3 +38,26 @@ export async function inputFetchByDay({ inputDate }) {
     alert('Erro ao buscar agendamentos')
   }
 }
+
+export async function updateSchedulesUI() {
+  try {
+    const response = await fetch(`${apiConfig.baseUrl}/schedules/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Erro ao carregar os agendamentos.");
+    }
+
+    const { dailySchedules } = await response.json();
+
+    // Re-renderiza os agendamentos na interface
+    renderSchedules({ dailySchedules });
+  } catch (error) {
+    console.error("Erro ao atualizar os agendamentos:", error.message);
+    alert("Não foi possível atualizar os agendamentos.");
+  }
+}

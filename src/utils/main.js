@@ -6,6 +6,7 @@ import "../libs/dayjs.js"
 import "../modules/form/submit.js"
 import "../modules/dom-load.js"
 import "../modules/form/date-change.js"
+import { removeSchedule } from "../services/remove-schedule.js"
 
 // Imports CSS
 import "../css/global.css"
@@ -18,6 +19,19 @@ const closeModalSpan = document.getElementById('closeModalSpan')
 const modal = document.getElementById('modal')
 const successModal = document.getElementById('successModal')
 const modalSuccessParagraph = document.getElementById('modal-success-paragraph')
+
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("remove-button")) {
+    event.preventDefault();
+    const id = event.target.dataset.id; // Obtém o ID armazenado no atributo data-id
+    if (id) {
+      removeSchedule({ id }); // Chama a função para remover agendamento
+      console.log(`Removing schedule with ID: ${id}`);
+    } else {
+      console.error("ID do agendamento não encontrado.");
+    }
+  }
+})
 
 // Abre o modal
 openModalBtn.addEventListener('click', () => {

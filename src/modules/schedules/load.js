@@ -18,4 +18,6 @@ export async function schedulesDay() {
   renderSchedules({ dailySchedules })
   // Renderiza as horas disponíveis.
   hoursLoad({ date, inputSchedules })
+
 }
+
