@@ -10,13 +10,13 @@ inputDate.onchange = () => {
 }
 
 
-export function hoursLoad({ date, dailySchedules }) {
+export function inputLoad({ dateInput, inputSchedules }) {
   // Limpa a lista de horários
   hours.innerHTML = ""
   
   
   // Obtém a lista de horários ocupados
-  const unavailableHours = dailySchedules.map((schedule) => {
+  const unavailableHours = inputSchedules.map((schedule) => {
     return dayjs(schedule.when).format("HH:mm"); // Agora estamos retornando o valor corretamente
   });
 
@@ -42,7 +42,7 @@ export function hoursLoad({ date, dailySchedules }) {
 
   // Verifica se a data do input é no futuro
   const isFuture = dayjs(date).isBefore(dayjs(inputDate.value));
-  
+ 
   const select = document.querySelector("select");
   // Cria um select com os horários de atendimento disponíveis, já preenchendo com a hora atual.
   opening.forEach(({ hour, available }) => {  

@@ -4,7 +4,7 @@ const periodMorning = document.getElementById("morning");
 const periodAfternoon = document.getElementById("afternoon");
 const periodNight = document.getElementById("night");
 
-export function renderSchedules({ dailySchedules }) {
+export function renderSchedules({ inputSchedules }) {
   try {
     // Verifica se os elementos foram encontrados
     if (!periodMorning || !periodAfternoon || !periodNight) {
@@ -17,9 +17,9 @@ export function renderSchedules({ dailySchedules }) {
     periodNight.innerHTML = "";
 
     // Renderiza na tela os agendamentos por período
-    dailySchedules.forEach((schedule) => {
+    inputSchedules.forEach((schedule) => {
       const { data, when } = schedule; // Desestruturação para acessar dados do agendamento
-      const { name, pet, description, time  } = data
+      const { name, pet, description } = data
       const hour = dayjs(when).format("HH:mm");
 
       // Cria o item do agendamento

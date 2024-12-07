@@ -1,5 +1,6 @@
 import { apiConfig } from "./api-config.js"
 import { successfullyModal } from "../utils/main.js"
+import { schedulesDay } from "../modules/schedules/load.js"
 const modal = document.getElementById('modal')
 
 
@@ -32,6 +33,8 @@ export async function scheduleNew({
           time
       } }),
     })
+    // chamo a função que renderiza os agendamentos para atualizar com o novo agendamento
+    schedulesDay()
     // aqui escondo o modal do form
     modal.style.display = 'none'
     // aqui chamo o modal de sucesso
