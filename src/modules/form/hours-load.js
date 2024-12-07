@@ -1,7 +1,6 @@
 import dayjs from "dayjs";
 import { openingHours } from "../../utils/openning-hours.js";
 import { schedulesDay } from "../schedules/load.js";
-import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js";
 const hours = document.getElementById("time-date");
 const inputDate = document.getElementById("date-time");
 
@@ -10,15 +9,15 @@ inputDate.onchange = () => {
 }
 
 
-export function hoursLoad({ date, dailySchedules }) {
+export function hoursLoad({ date, inputSchedules }) {
   // Limpa a lista de horários
   hours.innerHTML = ""
   
   
   // Obtém a lista de horários ocupados
-  const unavailableHours = dailySchedules.map((schedule) => {
-    return dayjs(schedule.when).format("HH:mm"); // Agora estamos retornando o valor corretamente
-  });
+  const unavailableHours = inputSchedules.map((schedule) => {
+    return dayjs(schedule.when).format("HH:mm")
+  })
 
   /* Aqui fiz uma requisição para o arquivo de horas abertas, fiz um map para exibir
   as horas de abertura fazendo um split e para separar pelos 2 pontos, desestruturando
@@ -28,7 +27,7 @@ export function hoursLoad({ date, dailySchedules }) {
     const [scheduleHour] = hour.split(":");
     
     // Verifica se a hora agora é anterior à hora de abertura do horário de atendimento.
-    const isHourPast = dayjs(inputDate.value).add(scheduleHour, "hour").isBefore(dayjs());
+    const isHourPast = dayjs(date.value).add(scheduleHour, "hour").isBefore(dayjs());
     
     // Verifica se o horário está disponível
     const available = !unavailableHours.includes(hour) && !isHourPast;
@@ -47,7 +46,6 @@ export function hoursLoad({ date, dailySchedules }) {
   // Cria um select com os horários de atendimento disponíveis, já preenchendo com a hora atual.
   opening.forEach(({ hour, available }) => {  
     const option = document.createElement("option");
-    //console.log(hour, available)
     // Se a data atual é no futuro todos os horários recebem 'available' como true
     
     
